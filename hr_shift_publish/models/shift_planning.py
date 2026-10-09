@@ -17,7 +17,7 @@ class ShiftPlanningShift(models.Model):
 
     def _get_schedule_url(self):
         self.ensure_one()
-        base_url = self.env["ir.config_parameter"].sudo().get_param("web.base.url")
+        base_url = self.env["ir.config_parameter"].sudo().get_str("web.base.url")
         return f"{base_url}/shift_schedule/{self.schedule_token}"
 
     def _get_schedule_lines(self):
