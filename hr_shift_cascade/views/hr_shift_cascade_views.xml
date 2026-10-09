@@ -35,6 +35,12 @@
                         </group>
                         <group>
                             <field name="rule_id" readonly="state != 'draft'" />
+                            <field
+                                name="excluded_employee_ids"
+                                widget="many2many_tags"
+                                readonly="state != 'draft'"
+                                invisible="not excluded_employee_ids and state != 'draft'"
+                            />
                             <field name="claim_id" invisible="not claim_id" />
                         </group>
                     </group>

@@ -503,3 +503,17 @@ msgstr "Mercredi"
 #: model:ir.model.fields,field_description:hr_shift_cascade.field_hr_shift_cascade_candidate__work_phone
 msgid "Work Phone"
 msgstr "Téléphone professionnel"
+
+#. module: hr_shift_cascade
+#: model:ir.model.fields,field_description:hr_shift_cascade.field_hr_shift_cascade__excluded_employee_ids
+msgid "Excluded Employees"
+msgstr "Employés exclus"
+
+#. module: hr_shift_cascade
+#: model:ir.model.fields,help:hr_shift_cascade.field_hr_shift_cascade__excluded_employee_ids
+msgid ""
+"Employees never put on the call list, e.g. the employee whose shift is being "
+"replaced."
+msgstr ""
+"Employés jamais inscrits sur la liste d'appel, p. ex. l'employé dont le "
+"quart est remplacé."

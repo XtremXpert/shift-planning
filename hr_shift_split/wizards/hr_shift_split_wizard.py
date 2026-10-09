@@ -1,6 +1,6 @@
 # Copyright 2026 Bemade Inc.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
-from odoo import api, fields, models
+from odoo import Command, api, fields, models
 from odoo.exceptions import UserError
 
 
@@ -78,6 +78,7 @@ class HrShiftSplitWizard(models.TransientModel):
         first, second = self.template_id._get_or_create_split_pair(self.cut_time)
         rule = self._find_rule()
         planning = self.planning_id
+        employee = self.env["hr.employee"]
         if self.line_id:
             employee = self.line_id.employee_id
             self.line_id.template_id = False
@@ -115,6 +116,8 @@ class HrShiftSplitWizard(models.TransientModel):
                     "template_id": part.id,
                     "day_number": self.day_number,
                     "rule_id": rule.id,
+                    # The employee being replaced is not called back
+                    "excluded_employee_ids": [Command.set(employee.ids)],
                 }
                 for part in (first, second)
             ]
