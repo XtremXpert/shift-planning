@@ -66,21 +66,21 @@
                                         name="action_accept"
                                         type="object"
                                         string="Accepts"
-                                        icon="fa-check"
+                                        icon="check"
                                         invisible="state != 'pending'"
                                     />
                                     <button
                                         name="action_decline"
                                         type="object"
                                         string="Declines"
-                                        icon="fa-times"
+                                        icon="close"
                                         invisible="state != 'pending'"
                                     />
                                     <button
                                         name="action_no_answer"
                                         type="object"
                                         string="No answer"
-                                        icon="fa-phone-slash"
+                                        icon="phone_disabled"
                                         invisible="state != 'pending'"
                                     />
                                 </list>

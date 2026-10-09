@@ -3,7 +3,7 @@
 {
     "name": "Employees Shifts Replacement Cascade",
     "summary": "Ordered call list to fill open shifts, with fairness rotation",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "author": "Bemade, Odoo Community Association (OCA)",
     "maintainers": ["XtremXpert"],
     "license": "AGPL-3",
@@ -11,7 +11,7 @@
     "category": "Human Resources/Shifts",
     "depends": ["hr_shift_request"],
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "views/hr_shift_cascade_views.xml",
         "views/hr_shift_coverage_gap_views.xml",
     ],
