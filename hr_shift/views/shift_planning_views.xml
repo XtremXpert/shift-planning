@@ -158,7 +158,8 @@
                                 <div class="text-end">
                                     <h3>
                                         <i
-                                            class="oi text-primary me-2" data-icon="calendar_month"
+                                            class="oi text-primary me-2"
+                                            data-icon="calendar_month"
                                             role="img"
                                             title="Planning"
                                         />
@@ -272,9 +273,14 @@
                             >
                                 <span
                                     t-if="record.reviewed.raw_value"
-                                    class="oi text-success" data-icon="check_box"
+                                    class="oi text-success"
+                                    data-icon="check_box"
                                 />
-                                <span t-else="" class="oi" data-icon="check_box_outline_blank" />
+                                <span
+                                    t-else=""
+                                    class="oi"
+                                    data-icon="check_box_outline_blank"
+                                />
                             </a>
                         </aside>
                         <main t-if="record.line_ids.raw_value">
@@ -428,12 +434,17 @@
                                     <span t-out="record.template_id.value" />
                                 </span>
                                 <i
-                                    class="oi text-success" data-icon="arrow_circle_right"
+                                    class="oi text-success"
+                                    data-icon="arrow_circle_right"
                                     role="img"
                                 />
                                 <field name="start_hour" widget="float_time" />
                                 <i class="oi" data-icon="arrow_right_alt" role="img" />
-                                <i class="oi text-danger" data-icon="schedule" role="img" />
+                                <i
+                                    class="oi text-danger"
+                                    data-icon="schedule"
+                                    role="img"
+                                />
                                 <field name="end_hour" widget="float_time" />
                             </div>
                         </main>

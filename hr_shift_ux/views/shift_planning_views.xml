@@ -27,7 +27,8 @@
                         class="badge text-bg-danger"
                     >
                         <i
-                        class="oi me-1" data-icon="warning"
+                        class="oi me-1"
+                        data-icon="warning"
                         role="img"
                         title="Coverage gaps"
                     />
@@ -38,7 +39,8 @@
                         class="badge text-bg-success"
                     >
                         <i
-                        class="oi me-1" data-icon="mail"
+                        class="oi me-1"
+                        data-icon="mail"
                         role="img"
                         title="Schedules sent"
                     />
@@ -141,7 +143,8 @@ The shifts of the week are created but nobody is assigned yet. Launch the automa
                     invisible="not coverage_gap_count"
                 >
                     <i
-                    class="oi me-1" data-icon="warning"
+                    class="oi me-1"
+                    data-icon="warning"
                     role="img"
                     title="Coverage gaps"
                 />
@@ -155,7 +158,8 @@ The shifts of the week are created but nobody is assigned yet. Launch the automa
                     invisible="not published_on"
                 >
                     <i
-                    class="oi me-1" data-icon="mail"
+                    class="oi me-1"
+                    data-icon="mail"
                     role="img"
                     title="Schedules sent"
                 /> Schedules sent to the employees on <field

@@ -18,9 +18,7 @@ class TestSwapUrgentAutoApproval(TransactionCase):
         cls.env.company.shift_end_day = "6"
         cls.env.company.swap_auto_approve_hours = 12
         cls.job = cls.env["hr.job"].create({"name": "Attendant"})
-        cls.calendar = cls.env["resource.calendar"].create(
-            {"name": "Standard 40h"}
-        )
+        cls.calendar = cls.env["resource.calendar"].create({"name": "Standard 40h"})
         cls.users = cls.env["res.users"].create(
             [
                 {

@@ -22,9 +22,7 @@ class TestShiftCascadeSms(TransactionCase):
         # 24/7 context: shifts are generated over the full week
         cls.env.company.shift_end_day = "6"
         cls.job_attendant = cls.env["hr.job"].create({"name": "Attendant"})
-        cls.calendar = cls.env["resource.calendar"].create(
-            {"name": "Standard 40h"}
-        )
+        cls.calendar = cls.env["resource.calendar"].create({"name": "Standard 40h"})
         cls.attendants = cls.env["hr.employee"].create(
             [
                 {

@@ -21,13 +21,13 @@ Employees Shifts Replacement Cascade - SMS
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fshift--planning-lightgray.png?logo=github
-    :target: https://github.com/OCA/shift-planning/tree/19.0/hr_shift_cascade_sms
+    :target: https://github.com/OCA/shift-planning/tree/20.0/hr_shift_cascade_sms
     :alt: OCA/shift-planning
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/shift-planning-19-0/shift-planning-19-0-hr_shift_cascade_sms
+    :target: https://translation.odoo-community.org/projects/shift-planning-20-0/shift-planning-20-0-hr_shift_cascade_sms
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/shift-planning&target_branch=19.0
+    :target: https://runboat.odoo-community.org/builds?repo=OCA/shift-planning&target_branch=20.0
     :alt: Try me on Runboat
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
@@ -35,18 +35,18 @@ Employees Shifts Replacement Cascade - SMS
 This module automates the *Employees Shifts Replacement Cascade* over
 SMS:
 
--  When a cascade starts, the first N candidates (configurable blast
-   size) receive an SMS with the shift and a tokenized link.
--  The link opens a minimal mobile page — no login, no app — with two
-   buttons: **I take it** / **Not available**. The first candidate to
-   accept gets the shift (through the open shift claim mechanics); late
-   acceptances get a friendly "already filled" page.
--  Unanswered offers expire after a configurable delay and the next
-   candidates are contacted automatically (cron, every 2 minutes).
--  The SMS gateway is a provider-agnostic HTTP template configured in
-   Employees settings, so any HTTP SMS API (e.g. your SIP trunk
-   provider's) works without code. A delivery failure never breaks the
-   cascade: it is logged on the candidate and the cron moves on.
+- When a cascade starts, the first N candidates (configurable blast
+  size) receive an SMS with the shift and a tokenized link.
+- The link opens a minimal mobile page — no login, no app — with two
+  buttons: **I take it** / **Not available**. The first candidate to
+  accept gets the shift (through the open shift claim mechanics); late
+  acceptances get a friendly "already filled" page.
+- Unanswered offers expire after a configurable delay and the next
+  candidates are contacted automatically (cron, every 2 minutes).
+- The SMS gateway is a provider-agnostic HTTP template configured in
+  Employees settings, so any HTTP SMS API (e.g. your SIP trunk
+  provider's) works without code. A delivery failure never breaks the
+  cascade: it is logged on the candidate and the cron moves on.
 
 The SMS content is minimal by design — shift, day and week only, never
 any beneficiary-related information.
@@ -76,7 +76,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/shift-planning/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/shift-planning/issues/new?body=module:%20hr_shift_cascade_sms%0Aversion:%2019.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/shift-planning/issues/new?body=module:%20hr_shift_cascade_sms%0Aversion:%2020.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -109,6 +109,6 @@ Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
 
 |maintainer-XtremXpert| 
 
-This module is part of the `OCA/shift-planning <https://github.com/OCA/shift-planning/tree/19.0/hr_shift_cascade_sms>`_ project on GitHub.
+This module is part of the `OCA/shift-planning <https://github.com/OCA/shift-planning/tree/20.0/hr_shift_cascade_sms>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.

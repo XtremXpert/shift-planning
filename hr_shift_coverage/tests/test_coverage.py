@@ -15,9 +15,7 @@ class TestShiftCoverage(TransactionCase):
         cls.env.company.shift_end_day = "6"
         cls.job_attendant = cls.env["hr.job"].create({"name": "Attendant"})
         cls.job_nurse = cls.env["hr.job"].create({"name": "Auxiliary Nurse"})
-        cls.calendar = cls.env["resource.calendar"].create(
-            {"name": "Standard 40h"}
-        )
+        cls.calendar = cls.env["resource.calendar"].create({"name": "Standard 40h"})
         cls.employees = cls.env["hr.employee"].create(
             [
                 {

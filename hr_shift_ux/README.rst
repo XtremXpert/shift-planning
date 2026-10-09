@@ -21,13 +21,13 @@ Employees Shifts UX
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fshift--planning-lightgray.png?logo=github
-    :target: https://github.com/OCA/shift-planning/tree/19.0/hr_shift_ux
+    :target: https://github.com/OCA/shift-planning/tree/20.0/hr_shift_ux
     :alt: OCA/shift-planning
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/shift-planning-19-0/shift-planning-19-0-hr_shift_ux
+    :target: https://translation.odoo-community.org/projects/shift-planning-20-0/shift-planning-20-0-hr_shift_ux
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/shift-planning&target_branch=19.0
+    :target: https://runboat.odoo-community.org/builds?repo=OCA/shift-planning&target_branch=20.0
     :alt: Try me on Runboat
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
@@ -36,23 +36,23 @@ This module makes the shift planning stack friendly for a non-technical
 coordinator. It only rearranges and enriches the existing views — no new
 behaviour, no new model.
 
--  The **weekly planning kanban** cards show at a glance the state of
-   the week (new, assignment, planned), the number of assigned day
-   shifts, the remaining open slots, the coverage gaps and whether the
-   schedules were sent to the employees.
--  The **planning form** becomes a control desk: the header buttons are
-   renamed and ordered as a numbered flow (create the shifts,
-   auto-assign, check coverage, send the schedules), contextual alerts
-   point to the next step, and the content of the week (one line per
-   employee with their weekly shift and planned hours, plus the coverage
-   gaps with their fix-it buttons) lives inside the form instead of
-   hiding behind smart buttons.
--  The **shifts of the week** open as a list grouped by department, with
-   the planned versus contracted hours of each employee.
--  The **coverage gaps** are sorted by date and severity, with the
-   replacement cascade and split-in-two buttons at hand.
--  The setup screens (shift templates, coverage rules, rotations) move
-   under a single *Configuration* menu.
+- The **weekly planning kanban** cards show at a glance the state of the
+  week (new, assignment, planned), the number of assigned day shifts,
+  the remaining open slots, the coverage gaps and whether the schedules
+  were sent to the employees.
+- The **planning form** becomes a control desk: the header buttons are
+  renamed and ordered as a numbered flow (create the shifts,
+  auto-assign, check coverage, send the schedules), contextual alerts
+  point to the next step, and the content of the week (one line per
+  employee with their weekly shift and planned hours, plus the coverage
+  gaps with their fix-it buttons) lives inside the form instead of
+  hiding behind smart buttons.
+- The **shifts of the week** open as a list grouped by department, with
+  the planned versus contracted hours of each employee.
+- The **coverage gaps** are sorted by date and severity, with the
+  replacement cascade and split-in-two buttons at hand.
+- The setup screens (shift templates, coverage rules, rotations) move
+  under a single *Configuration* menu.
 
 A ``fr_CA`` translation is included for every label the module defines.
 
@@ -84,7 +84,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/shift-planning/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/shift-planning/issues/new?body=module:%20hr_shift_ux%0Aversion:%2019.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/shift-planning/issues/new?body=module:%20hr_shift_ux%0Aversion:%2020.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -117,6 +117,6 @@ Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
 
 |maintainer-XtremXpert| 
 
-This module is part of the `OCA/shift-planning <https://github.com/OCA/shift-planning/tree/19.0/hr_shift_ux>`_ project on GitHub.
+This module is part of the `OCA/shift-planning <https://github.com/OCA/shift-planning/tree/20.0/hr_shift_ux>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.

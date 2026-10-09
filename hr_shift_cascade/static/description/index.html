@@ -374,7 +374,7 @@ ul.auto-toc {
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !! source digest: sha256:b61d1dd20fc5468bba58ce75eeff029d5d418b85be5ff5ef8e932473f75a1cbc
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/license-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/OCA/shift-planning/tree/19.0/hr_shift_cascade"><img alt="OCA/shift-planning" src="https://img.shields.io/badge/github-OCA%2Fshift--planning-lightgray.png?logo=github" /></a> <a class="reference external image-reference" href="https://translation.odoo-community.org/projects/shift-planning-19-0/shift-planning-19-0-hr_shift_cascade"><img alt="Translate me on Weblate" src="https://img.shields.io/badge/weblate-Translate%20me-F47D42.png" /></a> <a class="reference external image-reference" href="https://runboat.odoo-community.org/builds?repo=OCA/shift-planning&amp;target_branch=19.0"><img alt="Try me on Runboat" src="https://img.shields.io/badge/runboat-Try%20me-875A7B.png" /></a></p>
+<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/license-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/OCA/shift-planning/tree/20.0/hr_shift_cascade"><img alt="OCA/shift-planning" src="https://img.shields.io/badge/github-OCA%2Fshift--planning-lightgray.png?logo=github" /></a> <a class="reference external image-reference" href="https://translation.odoo-community.org/projects/shift-planning-20-0/shift-planning-20-0-hr_shift_cascade"><img alt="Translate me on Weblate" src="https://img.shields.io/badge/weblate-Translate%20me-F47D42.png" /></a> <a class="reference external image-reference" href="https://runboat.odoo-community.org/builds?repo=OCA/shift-planning&amp;target_branch=20.0"><img alt="Try me on Runboat" src="https://img.shields.io/badge/runboat-Try%20me-875A7B.png" /></a></p>
 <p>When a shift must be filled at short notice — an employee calls in sick
 at 5 AM — the coordinator’s job is a cascade of phone calls. This module
 turns that cascade into a managed process on top of <em>Employees Shifts
@@ -383,14 +383,14 @@ Coverage</em> and <em>Employees Shifts Requests</em>:</p>
 <li>From any coverage gap, launch a <strong>replacement cascade</strong>: the module
 builds the ordered list of who to call.</li>
 <li>Candidates are filtered on hard criteria (free that day, matching job
-position and department, matching declared availabilities) and
-ordered by <strong>fewest assigned hours in the week</strong> (overtime control),
-then <strong>least recently offered</strong> (fairness rotation).</li>
+position and department, matching declared availabilities) and ordered
+by <strong>fewest assigned hours in the week</strong> (overtime control), then
+<strong>least recently offered</strong> (fairness rotation).</li>
 <li>The coordinator can reorder the list before starting — the human
 override required for automated decisions affecting employees.</li>
 <li>Each contact outcome is logged (accepts / declines / no answer). An
-acceptance creates and approves an open shift claim, assigns the
-shift line and recomputes the coverage gaps; when every candidate is
+acceptance creates and approves an open shift claim, assigns the shift
+line and recomputes the coverage gaps; when every candidate is
 exhausted the cascade escalates loudly instead of failing silently.</li>
 </ul>
 <p>This is the manual-channel foundation: SMS and voice (IVR) channels plug
@@ -426,7 +426,7 @@ marked <strong>Exhausted</strong> and requires manual intervention.</li>
 <p>Bugs are tracked on <a class="reference external" href="https://github.com/OCA/shift-planning/issues">GitHub Issues</a>.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-<a class="reference external" href="https://github.com/OCA/shift-planning/issues/new?body=module:%20hr_shift_cascade%0Aversion:%2019.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
+<a class="reference external" href="https://github.com/OCA/shift-planning/issues/new?body=module:%20hr_shift_cascade%0Aversion:%2020.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
 <p>Do not contact contributors directly about support or help with technical issues.</p>
 </div>
 <div class="section" id="credits">
@@ -448,7 +448,7 @@ mission is to support the collaborative development of Odoo features and
 promote its widespread use.</p>
 <p>Current <a class="reference external" href="https://odoo-community.org/page/maintainer-role">maintainer</a>:</p>
 <p><a class="reference external image-reference" href="https://github.com/XtremXpert"><img alt="XtremXpert" src="https://github.com/XtremXpert.png?size=40px" /></a></p>
-<p>This module is part of the <a class="reference external" href="https://github.com/OCA/shift-planning/tree/19.0/hr_shift_cascade">OCA/shift-planning</a> project on GitHub.</p>
+<p>This module is part of the <a class="reference external" href="https://github.com/OCA/shift-planning/tree/20.0/hr_shift_cascade">OCA/shift-planning</a> project on GitHub.</p>
 <p>You are welcome to contribute. To learn how please visit <a class="reference external" href="https://odoo-community.org/page/Contribute">https://odoo-community.org/page/Contribute</a>.</p>
 </div>
 </div>

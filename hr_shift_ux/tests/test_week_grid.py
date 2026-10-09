@@ -23,9 +23,7 @@ class TestDayCodes(TransactionCase):
         """Two shifts the same day render as joined codes (Ja+N)."""
         self.env.user.tz = self.env.user.tz or "UTC"
         self.env.company.shift_end_day = "6"
-        calendar = self.env["resource.calendar"].create(
-            {"name": "Standard"}
-        )
+        calendar = self.env["resource.calendar"].create({"name": "Standard"})
         employee = self.env["hr.employee"].create(
             {
                 "name": "Day codes employee",

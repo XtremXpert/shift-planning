@@ -149,7 +149,10 @@
                     <div class="o_hr_shift_grid_menu_header text-muted small">
                         <b t-out="this.state.menu.employeeName" />
                         <span t-out="' — ' + this.state.menu.dayLabel" />
-                        <div t-if="this.state.menu.add" class="fst-italic">Add a shift</div>
+                        <div
+                            t-if="this.state.menu.add"
+                            class="fst-italic"
+                        >Add a shift</div>
                     </div>
                     <button
                         t-foreach="this.state.data.templates"
@@ -177,11 +180,11 @@
                             t-on-click="this.removeShift"
                         >
                             <span
-                                class="oi me-2"
-                                data-icon="close"
-                                role="img"
-                                aria-label="Remove"
-                            />
+                            class="oi me-2"
+                            data-icon="close"
+                            role="img"
+                            aria-label="Remove"
+                        />
                             Remove the shift
                         </button>
                     </t>

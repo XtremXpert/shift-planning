@@ -1,10 +1,10 @@
 // Portage Odoo 20 / Owl 3 : proxy au lieu de useState, props d'action standard.
 import {Component, onWillStart, proxy, useProps} from "@odoo/owl";
-import {standardActionServiceProps} from "@web/webclient/actions/action_plugin";
 import {ConfirmationDialog} from "@web/core/confirmation_dialog/confirmation_dialog";
 import {_t} from "@web/core/l10n/translation";
 import {registry} from "@web/core/registry";
 import {sprintf} from "@web/core/utils/strings";
+import {standardActionServiceProps} from "@web/webclient/actions/action_plugin";
 import {useService} from "@web/core/utils/hooks";
 
 const MENU_WIDTH = 280;
