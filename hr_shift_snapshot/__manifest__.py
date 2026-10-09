@@ -3,7 +3,7 @@
 {
     "name": "Employees Shifts Publication Snapshot",
     "summary": "Keep every published schedule and track variances against it",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "author": "Bemade, Odoo Community Association (OCA)",
     "maintainers": ["XtremXpert"],
     "license": "AGPL-3",
@@ -11,7 +11,7 @@
     "category": "Human Resources/Shifts",
     "depends": ["hr_shift_publish", "mail"],
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "views/hr_shift_publication_views.xml",
         "views/shift_planning_views.xml",
     ],

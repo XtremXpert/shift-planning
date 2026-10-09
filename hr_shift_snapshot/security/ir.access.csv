@@ -1,0 +1,7 @@
+id,name,model_id,group_id/id,operation,domain
+access_hr_shift_publication_user,hr.shift.publication user,hr.shift.publication,base.group_user,r,
+access_hr_shift_publication_manager,hr.shift.publication manager,hr.shift.publication,hr_shift.group_shift_manager,crud,
+access_hr_shift_publication_line_user,hr.shift.publication.line user,hr.shift.publication.line,base.group_user,r,
+access_hr_shift_publication_line_manager,hr.shift.publication.line manager,hr.shift.publication.line,hr_shift.group_shift_manager,crud,
+access_hr_shift_publication_variance_user,hr.shift.publication.variance user,hr.shift.publication.variance,base.group_user,r,
+access_hr_shift_publication_variance_manager,hr.shift.publication.variance manager,hr.shift.publication.variance,hr_shift.group_shift_manager,crud,
