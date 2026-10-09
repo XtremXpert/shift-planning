@@ -13,7 +13,7 @@ class TestRotation(TransactionCase):
         cls.env.user.tz = "UTC"
         cls.env.company.shift_end_day = "6"
         cls.calendar = cls.env["resource.calendar"].create(
-            {"name": "Standard", "tz": "UTC"}
+            {"name": "Standard"}
         )
         cls.employees = cls.env["hr.employee"].create(
             [

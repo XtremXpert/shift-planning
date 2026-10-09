@@ -77,5 +77,6 @@ class HrShiftRotationApply(models.TransientModel):
             "type": "ir.actions.act_window",
             "res_model": "hr.shift.planning",
             "view_mode": "list,form",
+            "views": [(False, "list"), (False, "form")],  # requis par Odoo 20
             "domain": [("id", "in", planning_ids)],
         }
