@@ -9,7 +9,7 @@
                     name="action_claim"
                     type="object"
                     string="Claim"
-                    icon="fa-hand-paper-o"
+                    icon="back_hand"
                 />
             </field>
         </field>
