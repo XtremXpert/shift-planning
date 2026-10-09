@@ -34,7 +34,7 @@ class HrShiftSmsGateway(models.AbstractModel):
         the caller logs the outcome and the cron retries or escalates.
         """
         params = self.env["ir.config_parameter"].sudo()
-        url_template = params.get_param("hr_shift_cascade_sms.gateway_url")
+        url_template = params.get_str("hr_shift_cascade_sms.gateway_url")
         if not url_template:
             _logger.warning(
                 "SMS gateway not configured "
@@ -43,7 +43,7 @@ class HrShiftSmsGateway(models.AbstractModel):
             )
             return False
         method = (
-            params.get_param("hr_shift_cascade_sms.gateway_method") or "GET"
+            params.get_str("hr_shift_cascade_sms.gateway_method") or "GET"
         ).upper()
         try:
             if method == "POST":
