@@ -14,7 +14,7 @@ class TestAutoPlan(TransactionCase):
         cls.env.company.shift_end_day = "6"
         cls.job = cls.env["hr.job"].create({"name": "Attendant"})
         cls.calendar = cls.env["resource.calendar"].create(
-            {"name": "Standard", "tz": "UTC"}
+            {"name": "Standard"}
         )
         cls.employees = cls.env["hr.employee"].create(
             [
@@ -118,14 +118,12 @@ class TestAutoPlan(TransactionCase):
         small = self.env["resource.calendar"].create(
             {
                 "name": "Part time 16h",
-                "tz": "UTC",
                 "attendance_ids": [
                     (5, 0, 0),
                     (
                         0,
                         0,
                         {
-                            "name": "Mon",
                             "dayofweek": "0",
                             "hour_from": 8,
                             "hour_to": 16,
@@ -135,7 +133,6 @@ class TestAutoPlan(TransactionCase):
                         0,
                         0,
                         {
-                            "name": "Tue",
                             "dayofweek": "1",
                             "hour_from": 8,
                             "hour_to": 16,
@@ -162,14 +159,12 @@ class TestAutoPlan(TransactionCase):
         small = self.env["resource.calendar"].create(
             {
                 "name": "Part time 8h",
-                "tz": "UTC",
                 "attendance_ids": [
                     (5, 0, 0),
                     (
                         0,
                         0,
                         {
-                            "name": "Mon",
                             "dayofweek": "0",
                             "hour_from": 8,
                             "hour_to": 16,
@@ -199,14 +194,12 @@ class TestAutoPlan(TransactionCase):
         cal8 = self.env["resource.calendar"].create(
             {
                 "name": "8h",
-                "tz": "UTC",
                 "attendance_ids": [
                     (5, 0, 0),
                     (
                         0,
                         0,
                         {
-                            "name": "Mon",
                             "dayofweek": "0",
                             "hour_from": 8,
                             "hour_to": 16,
@@ -218,14 +211,12 @@ class TestAutoPlan(TransactionCase):
         cal4 = self.env["resource.calendar"].create(
             {
                 "name": "4h",
-                "tz": "UTC",
                 "attendance_ids": [
                     (5, 0, 0),
                     (
                         0,
                         0,
                         {
-                            "name": "Mon",
                             "dayofweek": "0",
                             "hour_from": 8,
                             "hour_to": 12,
