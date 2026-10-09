@@ -35,7 +35,9 @@ class TestHrShift(TestHrShiftBase):
         self.planning.shift_ids.line_ids.template_id = self.template_morning
         start_dt = end_dt = datetime(2025, 1, 13, tzinfo=pytz.utc)
         res = self.employee_a.resource_calendar_id._attendance_intervals_batch(
-            start_dt, end_dt, resources=self.employee_a.resource_id
+            start_dt,
+            end_dt,
+            resources_per_tz={pytz.utc: self.employee_a.resource_id},  # Odoo 20
         )[self.employee_a.resource_id.id]
         interval = list(res)[0]
         start = interval[0]

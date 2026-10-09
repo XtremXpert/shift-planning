@@ -31,15 +31,18 @@ class ResourceCalendar(models.Model):
         return shifts
 
     def _attendance_intervals_batch(
-        self, start_dt, end_dt, resources=None, domain=None, tz=None, lunch=False
+        self, start_dt, end_dt, resources_per_tz=None, domain=None
     ):
+        # Odoo 20 : les ressources sont regroupées par fuseau horaire
+        # ({tz: resources}) ; plus de paramètres tz/lunch.
         # Override calendar intervals when a shift is found and substitute those
         # intervals with the ones on the shift
-        # TODO: deal with TZ!
         res = super()._attendance_intervals_batch(
-            start_dt, end_dt, resources, domain, tz, lunch
+            start_dt, end_dt, resources_per_tz, domain
         )
-        if resources and not lunch:
+        for tz, resources in (resources_per_tz or {}).items():
+            if not resources:
+                continue
             shift_ids = self._resource_shift_for_datetime_range(
                 start_dt, end_dt, resources, tz=tz
             )
@@ -59,8 +62,6 @@ class ResourceCalendar(models.Model):
                             or shift.end_time.date() == end.date()
                         )
                     ]
-                    # string_to_datetime was removed from resource.models.utils
-                    # in Odoo 19: localize the naive UTC datetimes directly.
                     start_time = pytz.utc.localize(shift.start_time).astimezone(tz)
                     end_time = pytz.utc.localize(shift.end_time).astimezone(tz)
                     intervals_to_add.append((start_time, end_time, shift))

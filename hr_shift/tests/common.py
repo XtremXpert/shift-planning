@@ -5,6 +5,10 @@ from odoo.addons.base.tests.common import BaseCommon
 
 
 class TestHrShiftBase(BaseCommon):
+    # Odoo 20 : BaseCommon bascule les tests sur un utilisateur restreint ;
+    # on garde le comportement 19 (superutilisateur).
+    _test_user_groups = ()
+
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -24,7 +28,6 @@ class TestHrShiftBase(BaseCommon):
                     0,
                     0,
                     {
-                        "name": "Attendance",
                         "dayofweek": str(day),
                         "hour_from": "08",
                         "hour_to": "12",
@@ -34,7 +37,6 @@ class TestHrShiftBase(BaseCommon):
                     0,
                     0,
                     {
-                        "name": "Attendance",
                         "dayofweek": str(day),
                         "hour_from": "13",
                         "hour_to": "17",

@@ -1,0 +1,11 @@
+id,name,model_id,group_id/id,operation,domain
+access_shift_template_user,access_shift_template user,hr.shift.template,base.group_user,r,
+access_shift_planning_user,access_shift_planning user,hr.shift.planning,base.group_user,r,
+access_shift_planning_shift_user,access_shift_planning_shift user,hr.shift.planning.shift,base.group_user,r,
+access_shift_planning_wizard_user,access_shift_planning_wizard user,shift.planning.wizard,base.group_user,r,
+access_shift_template_manager,access_shift_template manager,hr.shift.template,hr_shift.group_shift_manager,crud,
+access_shift_planning_manager,access_shift_planning manager,hr.shift.planning,hr_shift.group_shift_manager,crud,
+access_shift_planning_shift_manager,access_shift_planning_shift manager,hr.shift.planning.shift,hr_shift.group_shift_manager,crud,
+access_shift_planning_wizard_manager,access_shift_planning_wizard manager,shift.planning.wizard,hr_shift.group_shift_manager,crud,
+hr_shift_planning_line_rule_user_own,Personal shift lines,hr.shift.planning.line,base.group_user,r,"[('employee_id.user_id', '=', user.id), ('state', '!=', 'unassigned')]"
+hr_shift_planning_line_rule_user_all,All shift lines,hr.shift.planning.line,hr_shift.group_shift_manager,crud,"[(1,'=',1)]"
