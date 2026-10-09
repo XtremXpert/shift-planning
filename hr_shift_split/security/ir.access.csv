@@ -1,0 +1,2 @@
+id,name,model_id,group_id/id,operation,domain
+access_hr_shift_split_wizard_manager,hr.shift.split.wizard manager,hr.shift.split.wizard,hr_shift.group_shift_manager,crud,

@@ -125,5 +125,6 @@ class HrShiftSplitWizard(models.TransientModel):
             "name": self.env._("Replacement cascades"),
             "res_model": "hr.shift.cascade",
             "view_mode": "list,form",
+            "views": [(False, "list"), (False, "form")],  # requis par Odoo 20
             "domain": [("id", "in", cascades.ids)],
         }
