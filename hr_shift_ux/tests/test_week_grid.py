@@ -24,7 +24,7 @@ class TestDayCodes(TransactionCase):
         self.env.user.tz = self.env.user.tz or "UTC"
         self.env.company.shift_end_day = "6"
         calendar = self.env["resource.calendar"].create(
-            {"name": "Standard", "tz": "UTC"}
+            {"name": "Standard"}
         )
         employee = self.env["hr.employee"].create(
             {
