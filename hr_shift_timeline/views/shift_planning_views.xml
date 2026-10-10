@@ -17,7 +17,7 @@
                 <templates>
                     <div t-name="timeline-item">
                         <strong>
-                            <t t-esc="record.template_id[1]" />
+                            <t t-out="record.template_id[1]" />
                         </strong>
                     </div>
                 </templates>

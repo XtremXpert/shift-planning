@@ -42,7 +42,7 @@
                             name="action_view_shifts"
                             type="object"
                             invisible="state == 'new'"
-                            icon="fa-link"
+                            icon="link"
                         >
                             <field
                                 name="shifts_count"
@@ -55,7 +55,7 @@
                             name="action_view_issued_shifts"
                             type="object"
                             invisible="state == 'new' or issued_shifts_count == 0"
-                            icon="fa-unlink"
+                            icon="link_off"
                         >
                             <field
                                 name="issued_shifts_count"
@@ -98,7 +98,7 @@
                                         t-if="record.shifts_count.raw_value"
                                     ><span
                                         class="badge text-bg-light text-primary me-1"
-                                        t-esc="record.shifts_count.value"
+                                        t-out="record.shifts_count.value"
                                     /> Shifts</button>
                                     <button
                                         name="action_view_issued_shifts"
@@ -107,7 +107,7 @@
                                         t-if="record.issued_shifts_count.raw_value"
                                     ><span
                                         class="badge text-bg-light text-danger me-1"
-                                        t-esc="record.issued_shifts_count.value"
+                                        t-out="record.issued_shifts_count.value"
                                     /> Issues</button>
                                 </div>
                                 <div class="flex-grow-1 d-flex justify-content-center">
@@ -146,11 +146,11 @@
                                                 t-attf-context="{'weekday_number': #{day_value.weekday_number} }"
                                             >
                                                 <small
-                                                    t-esc="day_value.weekday.slice(0, 3)"
+                                                    t-out="day_value.weekday.slice(0, 3)"
                                                     class="text-uppercase"
                                                 />
                                                 <br />
-                                                <small t-esc="day_value.day" />
+                                                <small t-out="day_value.day" />
                                             </button>
                                         </t>
                                     </div>
@@ -158,11 +158,12 @@
                                 <div class="text-end">
                                     <h3>
                                         <i
-                                            class="fa fa-calendar text-primary me-2"
+                                            class="oi text-primary me-2"
+                                            data-icon="calendar_month"
                                             role="img"
                                             title="Planning"
                                         />
-                                        <t t-esc="record.display_name.value" />
+                                        <t t-out="record.display_name.value" />
                                     </h3>
                                 </div>
                             </div>
@@ -261,7 +262,7 @@
                                     options="{'preview_image': 'image_128', 'size': [24, 24]}"
                                     class="rounded-circle me-2"
                                 />
-                                <strong t-esc="record.employee_id.value" />
+                                <strong t-out="record.employee_id.value" />
                             </div>
                             <a
                                 class="btn"
@@ -272,9 +273,14 @@
                             >
                                 <span
                                     t-if="record.reviewed.raw_value"
-                                    class="fa fa-check-square-o text-success"
+                                    class="oi text-success"
+                                    data-icon="check_box"
                                 />
-                                <span t-else="" class="fa fa-square-o" />
+                                <span
+                                    t-else=""
+                                    class="oi"
+                                    data-icon="check_box_outline_blank"
+                                />
                             </a>
                         </aside>
                         <main t-if="record.line_ids.raw_value">
@@ -311,7 +317,7 @@
                                             name="action_view_shift_details"
                                             t-attf-context="{'shift_line_id': #{line} }"
                                         >
-                                            <t t-esc="line_value.day.slice(0, 2)" />
+                                            <t t-out="line_value.day.slice(0, 2)" />
                                         </button>
                                     </t>
                                 </div>
@@ -405,7 +411,7 @@
                                 <span
                                     t-if="['holiday', 'on_leave'].includes(record.state.raw_value)"
                                     class="badge bg-secondary"
-                                    t-esc="record.state.value"
+                                    t-out="record.state.value"
                                 />
                             </div>
                             <button
@@ -415,7 +421,7 @@
                                 name="action_unassign_shift"
                                 title="Unassign"
                             >
-                                <i class="fa fa-times" role="img" />
+                                <i class="oi" data-icon="close" role="img" />
                             </button>
                         </aside>
                         <main class="flex-grow-1">
@@ -425,15 +431,20 @@
                                 class="d-flex align-items-center gap-2"
                             >
                                 <span class="badge bg-light">
-                                    <span t-esc="record.template_id.value" />
+                                    <span t-out="record.template_id.value" />
                                 </span>
                                 <i
-                                    class="fa fa-arrow-circle-right text-success"
+                                    class="oi text-success"
+                                    data-icon="arrow_circle_right"
                                     role="img"
                                 />
                                 <field name="start_hour" widget="float_time" />
-                                <i class="fa fa-long-arrow-right" role="img" />
-                                <i class="fa fa-clock-o text-danger" role="img" />
+                                <i class="oi" data-icon="arrow_right_alt" role="img" />
+                                <i
+                                    class="oi text-danger"
+                                    data-icon="schedule"
+                                    role="img"
+                                />
                                 <field name="end_hour" widget="float_time" />
                             </div>
                         </main>

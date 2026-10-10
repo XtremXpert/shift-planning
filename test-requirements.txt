@@ -1,0 +1,1 @@
+odoo-addon-web_timeline @ git+https://github.com/XtremXpert/web.git@20.0-mig-mac#subdirectory=web_timeline

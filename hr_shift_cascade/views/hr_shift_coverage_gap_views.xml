@@ -9,7 +9,7 @@
                     name="action_launch_cascade"
                     type="object"
                     string="Launch Cascade"
-                    icon="fa-phone"
+                    icon="call"
                     groups="hr_shift.group_shift_manager"
                 />
             </field>

@@ -9,7 +9,7 @@
                     type="object"
                     name="action_view_publications"
                     class="oe_stat_button"
-                    icon="fa-camera"
+                    icon="photo_camera"
                     invisible="publication_count == 0"
                 >
                     <field

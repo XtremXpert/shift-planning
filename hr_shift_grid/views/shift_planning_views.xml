@@ -10,7 +10,7 @@
                     name="action_open_grid"
                     string="Interactive grid"
                     class="btn btn-secondary"
-                    icon="fa-th"
+                    icon="grid_view"
                     invisible="state == 'new' or not shift_ids"
                 />
             </xpath>

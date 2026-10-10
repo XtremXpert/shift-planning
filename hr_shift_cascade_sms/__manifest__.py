@@ -3,7 +3,7 @@
 {
     "name": "Employees Shifts Replacement Cascade - SMS",
     "summary": "Send cascade offers by SMS with tokenized accept links",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "author": "Bemade, Odoo Community Association (OCA)",
     "maintainers": ["XtremXpert"],
     "license": "AGPL-3",

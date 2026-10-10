@@ -3,7 +3,7 @@
 {
     "name": "Employees Shifts Split Replacement",
     "summary": "Replace one employee by two: split a shift into two parts",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "author": "Bemade, Odoo Community Association (OCA)",
     "maintainers": ["XtremXpert"],
     "license": "AGPL-3",
@@ -11,7 +11,7 @@
     "category": "Human Resources/Shifts",
     "depends": ["hr_shift_coverage"],
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "wizards/hr_shift_split_wizard_views.xml",
         "views/hr_shift_coverage_gap_views.xml",
     ],

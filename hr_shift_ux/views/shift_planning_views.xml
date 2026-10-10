@@ -27,29 +27,31 @@
                         class="badge text-bg-danger"
                     >
                         <i
-                        class="fa fa-exclamation-triangle me-1"
+                        class="oi me-1"
+                        data-icon="warning"
                         role="img"
                         title="Coverage gaps"
                     />
-                        <t t-esc="record.coverage_gap_count.value" /> coverage gaps
+                        <t t-out="record.coverage_gap_count.value" /> coverage gaps
                     </span>
                     <span
                         t-if="record.published_on.raw_value"
                         class="badge text-bg-success"
                     >
                         <i
-                        class="fa fa-envelope me-1"
+                        class="oi me-1"
+                        data-icon="mail"
                         role="img"
                         title="Schedules sent"
                     />
-                        Sent <t t-esc="record.published_on.value" />
+                        Sent <t t-out="record.published_on.value" />
                     </span>
                     <span
                         t-if="record.line_unassigned_count.raw_value and !record.line_assigned_count.raw_value"
                         class="badge text-bg-warning"
                     >
                         <t
-                        t-esc="record.line_unassigned_count.value"
+                        t-out="record.line_unassigned_count.value"
                     /> day shifts to assign
                     </span>
                     <span
@@ -63,7 +65,7 @@
                         class="badge text-bg-light"
                     >
                         <t
-                        t-esc="record.line_assigned_count.value"
+                        t-out="record.line_assigned_count.value"
                     /> day shifts assigned
                     </span>
                 </div>
@@ -141,7 +143,8 @@ The shifts of the week are created but nobody is assigned yet. Launch the automa
                     invisible="not coverage_gap_count"
                 >
                     <i
-                    class="fa fa-exclamation-triangle me-1"
+                    class="oi me-1"
+                    data-icon="warning"
                     role="img"
                     title="Coverage gaps"
                 />
@@ -155,7 +158,8 @@ The shifts of the week are created but nobody is assigned yet. Launch the automa
                     invisible="not published_on"
                 >
                     <i
-                    class="fa fa-envelope me-1"
+                    class="oi me-1"
+                    data-icon="mail"
                     role="img"
                     title="Schedules sent"
                 /> Schedules sent to the employees on <field
@@ -210,7 +214,7 @@ The shifts of the week are created but nobody is assigned yet. Launch the automa
                                 <button
                                     name="action_view_shift_details"
                                     type="object"
-                                    icon="fa-calendar"
+                                    icon="calendar_month"
                                     string="Day by day"
                                 />
                             </list>
@@ -237,14 +241,14 @@ The shifts of the week are created but nobody is assigned yet. Launch the automa
                                     name="action_launch_cascade"
                                     type="object"
                                     string="Launch cascade"
-                                    icon="fa-phone"
+                                    icon="call"
                                     groups="hr_shift.group_shift_manager"
                                 />
                                 <button
                                     name="action_open_split_wizard"
                                     type="object"
                                     string="Split in two"
-                                    icon="fa-scissors"
+                                    icon="content_cut"
                                     groups="hr_shift.group_shift_manager"
                                 />
                             </list>

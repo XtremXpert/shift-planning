@@ -22,7 +22,7 @@
             <body>
                 <t t-if="status == 'pending'">
                     <h2>
-                        <t t-esc="shift_label" />
+                        <t t-out="shift_label" />
                     </h2>
                     <p>Do you take this shift?</p>
                     <form
@@ -47,7 +47,7 @@
                 <t t-if="status == 'accepted'">
                     <h2>✅ Shift confirmed</h2>
                     <p>
-                        <t t-esc="shift_label" /> is yours.
+                        <t t-out="shift_label" /> is yours.
                         Thank you!
                     </p>
                 </t>

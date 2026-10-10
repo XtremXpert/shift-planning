@@ -3,12 +3,14 @@
 {
     "name": "Employees Shifts Timeline View",
     "summary": "Drag-and-drop timeline view of the shift planning",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "author": "Bemade, Odoo Community Association (OCA)",
     "maintainers": ["XtremXpert"],
     "license": "AGPL-3",
     "website": "https://github.com/OCA/shift-planning",
     "category": "Human Resources/Shifts",
     "depends": ["hr_shift", "web_timeline"],
-    "data": ["views/shift_planning_views.xml"],
+    "data": [
+        "views/shift_planning_views.xml",
+    ],
 }

@@ -13,9 +13,7 @@ class TestShiftSnapshot(TransactionCase):
         cls.env.user.tz = "UTC"
         cls.env.company.shift_end_day = "6"
         cls.job = cls.env["hr.job"].create({"name": "Attendant"})
-        cls.calendar = cls.env["resource.calendar"].create(
-            {"name": "Standard 40h", "tz": "UTC"}
-        )
+        cls.calendar = cls.env["resource.calendar"].create({"name": "Standard 40h"})
         cls.employees = cls.env["hr.employee"].create(
             [
                 {

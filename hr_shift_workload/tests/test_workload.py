@@ -15,13 +15,11 @@ class TestWorkload(TransactionCase):
         cls.calendar = cls.env["resource.calendar"].create(
             {
                 "name": "16h/week",
-                "tz": "UTC",
                 "attendance_ids": [
                     (
                         0,
                         0,
                         {
-                            "name": "Attendance",
                             "dayofweek": str(day),
                             "hour_from": 8,
                             "hour_to": 16,

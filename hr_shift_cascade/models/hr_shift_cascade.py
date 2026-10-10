@@ -34,6 +34,12 @@ class HrShiftCascade(models.Model):
         help="Coverage rule this cascade fills. Its job position and "
         "department restrict the candidate list.",
     )
+    excluded_employee_ids = fields.Many2many(
+        comodel_name="hr.employee",
+        string="Excluded Employees",
+        help="Employees never put on the call list, e.g. the employee whose "
+        "shift is being replaced.",
+    )
     candidate_ids = fields.One2many(
         comodel_name="hr.shift.cascade.candidate",
         inverse_name="cascade_id",
@@ -191,15 +197,20 @@ class HrShiftCascade(models.Model):
             for line in cascade._get_candidate_lines():
                 employee = line.employee_id
                 # One candidacy per employee, even with several free lines
-                if employee in seen or not cascade._employee_matches_availability(
-                    employee
+                if (
+                    employee in seen
+                    or employee in cascade.excluded_employee_ids
+                    or not cascade._employee_matches_availability(employee)
                 ):
                     continue
                 seen |= employee
                 free_entries.append(cascade._prepare_candidate_entry(employee, line))
             busy_entries = [
                 cascade._prepare_candidate_entry(employee, None)
-                for employee in cascade._get_busy_candidate_employees()
+                for employee in (
+                    cascade._get_busy_candidate_employees()
+                    - cascade.excluded_employee_ids
+                )
                 if cascade._employee_matches_availability(employee)
             ]
             free_entries.sort(key=sort_key)

@@ -1,0 +1,7 @@
+id,name,model_id,group_id/id,operation,domain
+hr_shift_availability_rule_own,Own shift availabilities,hr.shift.availability,base.group_user,crud,"[('employee_id.user_id', '=', user.id)]"
+hr_shift_availability_rule_manager,All shift availabilities,hr.shift.availability,hr_shift.group_shift_manager,crud,"[(1, '=', 1)]"
+hr_shift_claim_rule_own,Own shift claims,hr.shift.claim,base.group_user,cru,"[('employee_id.user_id', '=', user.id)]"
+hr_shift_claim_rule_manager,All shift claims,hr.shift.claim,hr_shift.group_shift_manager,crud,"[(1, '=', 1)]"
+hr_shift_swap_rule_own,Own shift swaps,hr.shift.swap,base.group_user,cru,"['|', ('employee_id.user_id', '=', user.id), ('target_employee_id.user_id', '=', user.id)]"
+hr_shift_swap_rule_manager,All shift swaps,hr.shift.swap,hr_shift.group_shift_manager,crud,"[(1, '=', 1)]"

@@ -16,18 +16,18 @@
             <body>
                 <t t-if="status == 'ok'">
                     <h2>
-                        <t t-esc="planning_label" />
+                        <t t-out="planning_label" />
                     </h2>
                     <p>
-                        <t t-esc="employee_name" />
+                        <t t-out="employee_name" />
                     </p>
                     <ul>
                         <li t-foreach="lines" t-as="line">
-                            <strong t-esc="line['day']" />
+                            <strong t-out="line['day']" />
                             <t t-if="line['date']">
-                                (<t t-esc="line['date']" />)
+                                (<t t-out="line['date']" />)
                             </t>
-                            : <t t-esc="line['template']" />
+                            : <t t-out="line['template']" />
                         </li>
                     </ul>
                 </t>

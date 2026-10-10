@@ -9,7 +9,7 @@
                     type="object"
                     name="action_open_split_wizard"
                     string="Split in two"
-                    icon="fa-scissors"
+                    icon="content_cut"
                     groups="hr_shift.group_shift_manager"
                 />
             </field>

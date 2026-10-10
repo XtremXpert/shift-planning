@@ -1,15 +1,17 @@
-import {Component, onWillStart, useState} from "@odoo/owl";
+// Portage Odoo 20 / Owl 3 : proxy au lieu de useState, props d'action standard.
+import {Component, onWillStart, proxy, useProps} from "@odoo/owl";
 import {ConfirmationDialog} from "@web/core/confirmation_dialog/confirmation_dialog";
 import {_t} from "@web/core/l10n/translation";
 import {registry} from "@web/core/registry";
 import {sprintf} from "@web/core/utils/strings";
+import {standardActionServiceProps} from "@web/webclient/actions/action_plugin";
 import {useService} from "@web/core/utils/hooks";
 
 const MENU_WIDTH = 280;
 
 export class ShiftGridAction extends Component {
     static template = "hr_shift_grid.ShiftGridAction";
-    static props = {"*": true};
+    props = useProps({...standardActionServiceProps});
 
     setup() {
         this.orm = useService("orm");
@@ -19,7 +21,7 @@ export class ShiftGridAction extends Component {
             (this.props.action.params && this.props.action.params.planning_id) || false;
         // Ask for confirmation only once per opening of the grid.
         this.publishConfirmed = false;
-        this.state = useState({data: null, menu: null});
+        this.state = proxy({data: null, menu: null});
         onWillStart(async () => {
             if (this.planningId) {
                 this.state.data = await this.orm.call(
@@ -52,7 +54,7 @@ export class ShiftGridAction extends Component {
     }
 
     addIconClass(lines) {
-        const classes = ["fa", "fa-plus", "o_hr_shift_grid_add"];
+        const classes = ["oi", "o_hr_shift_grid_add"];
         if (lines.some((line) => line.template_id)) {
             classes.push("o_hr_shift_grid_add_more");
         }

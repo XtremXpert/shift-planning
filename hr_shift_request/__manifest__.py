@@ -3,7 +3,7 @@
 {
     "name": "Employees Shifts Requests",
     "summary": "Employee availabilities, open shift claims and shift swaps",
-    "version": "19.0.1.1.0",
+    "version": "20.0.1.1.0",
     "author": "Bemade, Odoo Community Association (OCA)",
     "maintainers": ["XtremXpert"],
     "license": "AGPL-3",
@@ -11,8 +11,7 @@
     "category": "Human Resources/Shifts",
     "depends": ["hr_shift_coverage"],
     "data": [
-        "security/hr_shift_request_security.xml",
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "views/hr_shift_availability_views.xml",
         "views/hr_shift_claim_views.xml",
         "views/hr_shift_swap_views.xml",

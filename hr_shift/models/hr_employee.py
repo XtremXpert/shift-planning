@@ -50,3 +50,11 @@ class HrEmployee(models.Model):
             HrEmployee, (self - employees_in_current_shift)
         )._get_employee_working_now()
         return others + employees_in_current_shift.ids
+
+
+class HrEmployeePublic(models.Model):
+    _inherit = "hr.employee.public"
+
+    # Odoo 20 : les utilisateurs sans droits RH lisent hr.employee via la vue
+    # publique ; le champ doit y exister pour les recherches/lectures.
+    shift_planning = fields.Boolean(readonly=True)

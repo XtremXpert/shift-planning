@@ -21,13 +21,13 @@ Employees Shifts Interactive Grid
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fshift--planning-lightgray.png?logo=github
-    :target: https://github.com/OCA/shift-planning/tree/19.0/hr_shift_grid
+    :target: https://github.com/OCA/shift-planning/tree/20.0/hr_shift_grid
     :alt: OCA/shift-planning
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/shift-planning-19-0/shift-planning-19-0-hr_shift_grid
+    :target: https://translation.odoo-community.org/projects/shift-planning-20-0/shift-planning-20-0-hr_shift_grid
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/shift-planning&target_branch=19.0
+    :target: https://runboat.odoo-community.org/builds?repo=OCA/shift-planning&target_branch=20.0
     :alt: Try me on Runboat
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
@@ -39,14 +39,14 @@ language settings, and one colored chip per assigned day shift.
 
 From the grid the coordinator can:
 
--  assign a shift template to an empty day with two clicks;
--  change or remove an assigned shift from a small contextual menu;
--  move a shift to another day or employee with drag & drop;
--  swap two shifts by dropping one chip onto another;
--  watch the weekly hours per employee and the assignments per day being
-   recalculated live;
--  see the coverage gaps of each day (when the Shift Coverage module is
-   installed) refreshed after every change.
+- assign a shift template to an empty day with two clicks;
+- change or remove an assigned shift from a small contextual menu;
+- move a shift to another day or employee with drag & drop;
+- swap two shifts by dropping one chip onto another;
+- watch the weekly hours per employee and the assignments per day being
+  recalculated live;
+- see the coverage gaps of each day (when the Shift Coverage module is
+  installed) refreshed after every change.
 
 When the week has already been sent to the employees, the first change
 asks for a confirmation and every subsequent change is logged in the
@@ -69,14 +69,14 @@ Usage
 2. Click the **Interactive grid** button in the header.
 3. In the grid:
 
-   -  click an empty cell to pick a shift template from the menu;
-   -  click a chip to change or remove the shift;
-   -  drag a chip to an empty cell to move the shift, or onto another
-      chip to swap both shifts;
-   -  days on leave are shown as a gray non-movable chip;
-   -  the footer shows the number of employees assigned each day, with a
-      red badge counting the missing employees when the Shift Coverage
-      module reports gaps.
+   - click an empty cell to pick a shift template from the menu;
+   - click a chip to change or remove the shift;
+   - drag a chip to an empty cell to move the shift, or onto another
+     chip to swap both shifts;
+   - days on leave are shown as a gray non-movable chip;
+   - the footer shows the number of employees assigned each day, with a
+     red badge counting the missing employees when the Shift Coverage
+     module reports gaps.
 
 4. If the week was already sent to the employees, the first change asks
    for a confirmation and the changes are traced in the chatter of the
@@ -88,7 +88,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/shift-planning/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/shift-planning/issues/new?body=module:%20hr_shift_grid%0Aversion:%2019.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/shift-planning/issues/new?body=module:%20hr_shift_grid%0Aversion:%2020.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -121,6 +121,6 @@ Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
 
 |maintainer-XtremXpert| 
 
-This module is part of the `OCA/shift-planning <https://github.com/OCA/shift-planning/tree/19.0/hr_shift_grid>`_ project on GitHub.
+This module is part of the `OCA/shift-planning <https://github.com/OCA/shift-planning/tree/20.0/hr_shift_grid>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.

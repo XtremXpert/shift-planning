@@ -3,7 +3,7 @@
 {
     "name": "Employees Shifts Rotations",
     "summary": "Rotating week patterns applied over multiple plannings",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "author": "Bemade, Odoo Community Association (OCA)",
     "maintainers": ["XtremXpert"],
     "license": "AGPL-3",
@@ -11,7 +11,7 @@
     "category": "Human Resources/Shifts",
     "depends": ["hr_shift"],
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "views/hr_shift_rotation_views.xml",
         "wizards/hr_shift_rotation_apply_views.xml",
     ],

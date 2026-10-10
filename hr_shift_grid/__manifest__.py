@@ -3,7 +3,7 @@
 {
     "name": "Employees Shifts Interactive Grid",
     "summary": "Interactive weekly grid to assign, move and swap shifts",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "author": "Bemade, Odoo Community Association (OCA)",
     "maintainers": ["XtremXpert"],
     "license": "AGPL-3",

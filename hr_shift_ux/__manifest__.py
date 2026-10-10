@@ -3,7 +3,7 @@
 {
     "name": "Employees Shifts UX",
     "summary": "Coordinator-friendly views for the shift planning stack",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "author": "Bemade, Odoo Community Association (OCA)",
     "maintainers": ["XtremXpert"],
     "license": "AGPL-3",

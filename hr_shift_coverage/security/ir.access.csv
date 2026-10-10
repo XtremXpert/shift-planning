@@ -1,0 +1,5 @@
+id,name,model_id,group_id/id,operation,domain
+access_hr_shift_coverage_rule_user,hr.shift.coverage.rule user,hr.shift.coverage.rule,base.group_user,r,
+access_hr_shift_coverage_rule_manager,hr.shift.coverage.rule manager,hr.shift.coverage.rule,hr_shift.group_shift_manager,crud,
+access_hr_shift_coverage_gap_user,hr.shift.coverage.gap user,hr.shift.coverage.gap,base.group_user,r,
+access_hr_shift_coverage_gap_manager,hr.shift.coverage.gap manager,hr.shift.coverage.gap,hr_shift.group_shift_manager,crud,

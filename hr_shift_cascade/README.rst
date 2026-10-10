@@ -21,13 +21,13 @@ Employees Shifts Replacement Cascade
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fshift--planning-lightgray.png?logo=github
-    :target: https://github.com/OCA/shift-planning/tree/19.0/hr_shift_cascade
+    :target: https://github.com/OCA/shift-planning/tree/20.0/hr_shift_cascade
     :alt: OCA/shift-planning
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/shift-planning-19-0/shift-planning-19-0-hr_shift_cascade
+    :target: https://translation.odoo-community.org/projects/shift-planning-20-0/shift-planning-20-0-hr_shift_cascade
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/shift-planning&target_branch=19.0
+    :target: https://runboat.odoo-community.org/builds?repo=OCA/shift-planning&target_branch=20.0
     :alt: Try me on Runboat
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
@@ -37,18 +37,18 @@ at 5 AM — the coordinator's job is a cascade of phone calls. This module
 turns that cascade into a managed process on top of *Employees Shifts
 Coverage* and *Employees Shifts Requests*:
 
--  From any coverage gap, launch a **replacement cascade**: the module
-   builds the ordered list of who to call.
--  Candidates are filtered on hard criteria (free that day, matching job
-   position and department, matching declared availabilities) and
-   ordered by **fewest assigned hours in the week** (overtime control),
-   then **least recently offered** (fairness rotation).
--  The coordinator can reorder the list before starting — the human
-   override required for automated decisions affecting employees.
--  Each contact outcome is logged (accepts / declines / no answer). An
-   acceptance creates and approves an open shift claim, assigns the
-   shift line and recomputes the coverage gaps; when every candidate is
-   exhausted the cascade escalates loudly instead of failing silently.
+- From any coverage gap, launch a **replacement cascade**: the module
+  builds the ordered list of who to call.
+- Candidates are filtered on hard criteria (free that day, matching job
+  position and department, matching declared availabilities) and ordered
+  by **fewest assigned hours in the week** (overtime control), then
+  **least recently offered** (fairness rotation).
+- The coordinator can reorder the list before starting — the human
+  override required for automated decisions affecting employees.
+- Each contact outcome is logged (accepts / declines / no answer). An
+  acceptance creates and approves an open shift claim, assigns the shift
+  line and recomputes the coverage gaps; when every candidate is
+  exhausted the cascade escalates loudly instead of failing silently.
 
 This is the manual-channel foundation: SMS and voice (IVR) channels plug
 on top of the same cascade and candidate models.
@@ -77,7 +77,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/shift-planning/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/shift-planning/issues/new?body=module:%20hr_shift_cascade%0Aversion:%2019.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/shift-planning/issues/new?body=module:%20hr_shift_cascade%0Aversion:%2020.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -110,6 +110,6 @@ Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
 
 |maintainer-XtremXpert| 
 
-This module is part of the `OCA/shift-planning <https://github.com/OCA/shift-planning/tree/19.0/hr_shift_cascade>`_ project on GitHub.
+This module is part of the `OCA/shift-planning <https://github.com/OCA/shift-planning/tree/20.0/hr_shift_cascade>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.

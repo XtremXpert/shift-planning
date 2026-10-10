@@ -3,7 +3,7 @@
 {
     "name": "Employees Shifts Auto Plan",
     "summary": "Fill every coverage gap with the best candidate in one click",
-    "version": "19.0.1.2.0",
+    "version": "20.0.1.2.0",
     "author": "Bemade, Odoo Community Association (OCA)",
     "maintainers": ["XtremXpert"],
     "license": "AGPL-3",

@@ -13,7 +13,7 @@ class HrShiftCascade(models.Model):
         string="Send SMS Offers",
         default=lambda self: self.env["ir.config_parameter"]
         .sudo()
-        .get_param("hr_shift_cascade_sms.enabled_by_default", "False")
+        .get_str("hr_shift_cascade_sms.enabled_by_default", "False")
         == "True",
     )
     sms_blast_size = fields.Integer(
@@ -92,7 +92,7 @@ class HrShiftCascadeCandidate(models.Model):
 
     def _get_token_url(self):
         self.ensure_one()
-        base_url = self.env["ir.config_parameter"].sudo().get_param("web.base.url")
+        base_url = self.env["ir.config_parameter"].sudo().get_str("web.base.url")
         return f"{base_url}/shift_cascade/{self.access_token}"
 
     def _sms_body(self):
